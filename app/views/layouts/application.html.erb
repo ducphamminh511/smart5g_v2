@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="zxx">
 
 <head>
-    <title>Recognize Personal Category Bootstrap Responsive Template | Home :: W3layouts</title>
+    <title>Smart5G | Smart Solutions For Great Business</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
@@ -25,7 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     </script>
     <!-- //Meta tag Keywords -->
-
+    <%= favicon_link_tag 'favicon.png', rel: 'icon', type: 'image/png' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -43,16 +43,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- nav -->
         <nav class="main-header d-flex">
             <div id="brand">
-                <div id="logo">
+                <div >
                     <a href="index.html">
-                      <i class="fas fa-crosshairs"></i>
+                      <%= image_tag 'logo.png', :class => "img-fluid d-none d-md-block p-5" %>
+                      <%= image_tag 'logo.png', :class => "img-fluid d-block d-md-none" %>
                     </a>
                 </div>
-                <div id="word-mark">
-                    <h1>
-                        <a href="index.html">Recognize</a>
-                    </h1>
-                </div>
+                
             </div>
             <div id="menu">
                 <div id="menu-toggle">
@@ -64,25 +61,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <ul class="text-center nav-honey">
                     <li>
-                        <a href="index.html" class="active ">Home</a>
+                        <a href="index.html" class="active "><%= t("menu.home")%></a>
                     </li>
                     <li>
-                        <a class="scroll" href="#about">About</a>
+                        <a class="scroll" href="#about"><%= t("menu.tech")%></a>
                     </li>
                     <li>
-                        <a class="scroll" href="#services">Services</a>
+                        <a class="scroll" href="#services"><%= t("menu.services")%></a>
                     </li>
                     <li>
-                        <a class="scroll" href="#projects">Projects</a>
+                        <a class="scroll" href="#projects"><%= t("menu.projects")%></a>
                     </li>
                     <li>
-                        <a class="scroll" href="#contact">Contact</a>
+                        <a class="scroll" href="#contact"><%= t("menu.contact")%></a>
                     </li>
-                    <li class="login">
-                        <button type="button" class="btn login-btn text-uppercase " data-toggle="modal" data-target="#exampleModalCenter">
-                          Login
-                        </button>
-                    </li>
+                     
+                    <% if I18n.locale == :en %>
+                        <li>
+                            <a href="/vi" class="lang m-auto">
+                                <%= image_tag('flag-vi.png', style: 'width:100%')%>
+                            </a>
+                        </li>
+                    <% end %>
+                
+                    <% if I18n.locale == :vi %>
+                        <li> 
+                            
+                            <a href="/en" class="lang m-auto">
+                                <%= image_tag('flag-usa.png', style: 'width:100%')%>
+                            </a>
+                        </li>
+                    <% end %>
                 </ul>
             </div>
             <div class="clearfix"></div>
@@ -90,21 +99,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- //nav -->
         <!-- banner -->
         <div class="banner_section">
-            <div class="snow-container">
-                <div class="snow foreground"></div>
-                <div class="snow foreground layered"></div>
-                <div class="snow middleground"></div>
-                <div class="snow middleground layered"></div>
-                <div class="snow background"></div>
-                <div class="snow background layered"></div>
-            </div>
             <div class="banner-info text-uppercase">
-                <h6 data-aos="fade-right">Introduction</h6>
-                <h5 data-aos="fade-right">Hello, my name is Daniel</h5>
-                <h3 data-text="I'm a Programmer">I'm a Programmer</h3>
+                <h6 data-aos="fade-right"><%= t("banner.intro")%></h6>
+                <h5 data-aos="fade-right"><%= t("banner.hello")%></h5>
+                <h3 class="d-none d-md-block intro-content-pc" data-text="<%= t("banner.content")%>"><%= t("banner.content")%></h3>
+                <h3 class="d-block d-md-none intro-content-mobile" ><%= t("banner.content")%></h3>
                 <div class="ban-buttons mt-3" data-aos="fade-right">
-                    <a class="btn work scroll" href="#projects">My Work</a>
-                    <a class="btn work scroll active" href="#contact">Here me</a>
+                    <a class="btn work scroll" href="#projects"><%= t("banner.project_btn")%></a>
+                    <a class="btn work scroll active" href="#contact"><%= t("banner.contact_btn")%></a>
                 </div>
 
             </div>
@@ -118,53 +120,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-4">
                 <div class="info-about text-center">
-                    <h4 class="sub-tittle-w3">About Me</h4>
-                    <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3">Welcome to My website</h3>
+                    <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3"><%= t('tech_heading') %></h3>
                     <div class="row mt-lg-5 mt-3">
-                        <div class="col-lg-4 progress-info-content text-left">
+                        <div class="col-lg-4 progress-info-content text-center">
                             <div class="progress-one my-lg-5" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">Web Design</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <h4 class="progress-tittle-w3">Shopify</h4>
+                                <%= image_tag 'shopify_logo.png', :class => "img-fluid" %>
+                                
                             </div>
                             <div class="progress-one" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">Branding</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <h4 class="progress-tittle-w3">Woo Commerce</h4>
+                                <%= image_tag 'woo_logo.png', :class => "img-fluid" %>
                             </div>
 
                         </div>
-                        <div class="col-lg-4 progress-info-content text-left">
+                        <div class="col-lg-4 progress-info-content text-center">
                             <div class="progress-one my-lg-5" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">PHP Development</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <h4 class="progress-tittle-w3">Ruby On Rails</h4>
+                                <%= image_tag 'rails_logo.png', :class => "img-fluid" %>
                             </div>
                             <div class="progress-one" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">Marketing</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <h4 class="progress-tittle-w3">ReactJS</h4>
+                                <%= image_tag 'react_logo.png', :class => "img-fluid" %>
                             </div>
                         </div>
-                        <div class="col-lg-4 progress-info-content text-left">
+                        <div class="col-lg-4 progress-info-content text-center">
                             <div class="progress-one my-lg-5" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">Photography</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <h4 class="progress-tittle-w3">Bootstrap</h4>
+                                <%= image_tag 'bootstrap_logo.png', :class => "img-fluid" %>
                             </div>
                             <div class="progress-one" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">
-                                    SEO</h4>
-                                <div class="progress">
-
-                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-
-                                </div>
+                                <h4 class="progress-tittle-w3">Wordpress</h4>
+                               <%= image_tag 'wordpress_logo.png', :class => "img-fluid" %>
                             </div>
 
 
@@ -287,107 +274,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <section class="gallery py-md-5 py-3" id="projects">
         <div class="gallery-inner container py-md-5 pb-3">
             <h4 class="sub-tittle-w3 text-uppercase text-center">View all</h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">My Projects</h3>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Our Projects</h3>
             <div class="row">
-
-                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                <div class="col-md-4 proj_gallery_grid">
                     <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g1.jpg">
+                        <a href="https://www.perromart.com.sg" target="_blank" >
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g1.jpg', :class => "img-fluid" %>
+                                <%= image_tag 'perromart_website.jpg', :class => "img-fluid" %>
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g2.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g2.jpg', :class => "img-fluid" %>
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g3.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g3.jpg', :class => "img-fluid" %>
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
+                                    <h3>Perromart</h3>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
-                    <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g4.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g4.jpg', :class => "img-fluid" %>
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g5.jpg">
+                        <a title="" href="https://twippy.co/" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g5.jpg', :class => "img-fluid" %>
+                                <%= image_tag 'twippy_website.jpg', :class => "img-fluid" %>
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
+                                    <h3>Twippy</h3>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g6.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g6.jpg', :class => "img-fluid" %>
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                   
                 </div>
                 <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                     <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g7.jpg">
+                        <a title="" href="https://witchcraft101.com/" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g7.jpg', :class => "img-fluid" %>
+                                <%= image_tag 'witchraft_website.jpg', :class => "img-fluid" %>
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g8.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g8.jpg', :class => "img-fluid" %>
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g9.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <%= image_tag 'g9.jpg', :class => "img-fluid" %>
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
+                                    <h3>Witchcraft</h3>
                                 </div>
                             </div>
                         </a>
@@ -406,30 +326,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="row mt-lg-5 stats-con text-white">
                 <div class="col-sm-3 col-6 stats_info counter_grid">
 
-                    <i class="far fa-lightbulb"></i>
-                    <p class="counter">645</p>
-                    <h4>Projects Done</h4>
-
-                </div>
-                <div class="col-sm-3 col-6 stats_info counter_grid1">
-
-                    <i class="far fa-heart"></i>
-                    <p class="counter">563</p>
-                    <h4>Satisfied Clients</h4>
-
-                </div>
-                <div class="col-sm-3 col-6 stats_info counter_grid">
-
-                    <i class="fas fa-magic"></i>
-                    <p class="counter">1145</p>
-                    <h4>Awards</h4>
+                    <i class="fa fa-coffee"></i>
+                    <p class="counter">115</p>
+                    <h4>Cups of Coffee</h4>
 
                 </div>
                 <div class="col-sm-3 col-6 stats_info counter_grid2">
 
-                    <i class="far fa-smile"></i>
-                    <p class="counter">1045</p>
-                    <h4>Happy Clients</h4>
+                    <i class="fa fa-clock-o"></i>
+                    <p class="counter">104</p>
+                    <h4>Coding Hours</h4>
+
+                </div>
+                <div class="col-sm-3 col-6 stats_info counter_grid">
+
+                    <i class="fa fa-trophy"></i>
+                    <p class="counter">3</p>
+                    <h4>Successful Projects</h4>
+
+                </div>
+                <div class="col-sm-3 col-6 stats_info counter_grid1">
+
+                    <i class="fa fa-heart"></i>
+                    <p class="counter">2</p>
+                    <h4>Satisfied Clients</h4>
 
                 </div>
             </div>
@@ -446,7 +366,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="carousel-item active">
                         <div class="testimonials_grid center">
                             <div class="testimonials_grid-inn text-uppercase">
-                                <i class="fas fa-quote-left"></i>
+                                <i class="fa fa-quote-left"></i>
                                 <p>Lorem ipsum dolor sit amet,Maecenas interdum magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
                             </div>
                             <h3>Gretchen </h3>
@@ -482,11 +402,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </div>
                     <a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
-									<span class="fas fa-long-arrow-alt-left"></span>
+									<span class="fa fa-arrow-left"></span>
 									<span class="sr-only">Previous</span>
 								</a>
                     <a class="carousel-control-next test" href="#carouselExampleControls" role="button" data-slide="next">
-									<span class="fas fa-long-arrow-alt-right" aria-hidden="true"></span>
+									<span class="fa fa-arrow-right" aria-hidden="true"></span>
 									<span class="sr-only">Next</span>
 
 								</a>
@@ -495,89 +415,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     <!-- //testimonials -->
-    <!-- /Contact-->
-    <section class="contact py-lg-5 py-md-5 py-3" id="contact">
-        <div class="container">
-            <div class="inner-sec-w3ls py-lg-5 py-3">
-                <h4 class="sub-tittle-w3 text-uppercase text-center">Find Me</h4>
-                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">Contact Me Now</h3>
-
-                <div class="contact_grid_right">
-                    <form action="#" method="post">
-                        <div class="row contact_left_grid">
-                            <div class="col-md-6 con-left" data-aos="fade-up">
-                                <div class="form-group">
-
-                                    <input class="form-control" type="text" name="Name" placeholder="" required="">
-                                </div>
-                                <div class="form-group">
-
-                                    <input class="form-control" type="email" name="Email" placeholder="" required="">
-                                </div>
-                                <div class="form-group">
-
-                                    <input class="form-control" type="text" name="Subject" placeholder="" required="">
-                                </div>
-                            </div>
-                            <div class="col-md-6 con-right" data-aos="fade-up">
-                                <div class="form-group">
-                                    <textarea id="textarea" placeholder="" required=""></textarea>
-                                </div>
-                            </div>
-                            <div class="sub-honey mx-auto mt-3">
-                                <input class="form-control" type="submit" value="Submit"> </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="address row mt-lg-5">
-
-                    <div class="col-md-4 address-grid" data-aos="flip-up">
-                        <div class="address-info">
-                            <div class="address-left text-center">
-                                <i class="far fa-map"></i>
-                            </div>
-                            <div class="address-right text-center">
-                                <h6 class="my-3">Address</h6>
-                                <p> California, USA
-
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 address-grid" data-aos="flip-up">
-                        <div class="address-info">
-                            <div class="address-left text-center">
-                                <i class="far fa-envelope"></i>
-                            </div>
-                            <div class="address-right text-center">
-                                <h6 class="my-3">Email</h6>
-                                <p>Email :
-                                    <a href="mailto:example@email.com"> mail@example.com</a>
-
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 address-grid" data-aos="flip-up">
-                        <div class="address-info">
-                            <div class="address-left text-center">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="address-right text-center">
-                                <h6 class="my-3">Phone</h6>
-                                <p>+1 234 567 8901</p>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //Contact -->
+    <%= yield %>
     <!--/footer-->
     <footer class="footer text-left">
         <div class="container py-4 py-sm-5">
@@ -635,8 +473,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-lg-4 footer-end-grid mt-md-0 mt-sm-5" data-aos="fade-up">
                     <h2>
                         <a href="index.html">
-                   <i class="fas fa-crosshairs"></i> Recognize
-                </a>
+                            <%= image_tag 'logo.png', :class => "img-fluid p-5" %>
+                        </a>
                     </h2>
                 </div>
             </div>
@@ -763,6 +601,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <!--//Register-->
 
+
   
     <script>
         AOS.init({
@@ -881,10 +720,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
     <!-- simpleLightbox -->
 
-    <script>
-        $('.proj_gallery_grid a').simpleLightbox();
-
-    </script>
     <!-- //simpleLightbox -->
     <!-- stats -->
     

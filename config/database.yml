@@ -26,7 +26,7 @@ default: &default
 
 development:
   <<: *default
-  database: huyen_blog_development
+  database: smart5g_development
   username: postgres
   password: 123456
 staging:

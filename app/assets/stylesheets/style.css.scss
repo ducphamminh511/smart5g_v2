@@ -4,7 +4,34 @@
 	License: Creative Commons Attribution 3.0 Unported
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
-
+@mixin xs { @media (max-width: 575.98px) {
+    @content;
+  }
+  }
+  @mixin sm { @media (min-width: 576px) and (max-width: 767.98px) {
+    @content;
+  }
+  }
+  @mixin md { @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+  }
+  @mixin lg { @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+  }
+  @mixin xl { @media (min-width: 1200px) {
+    @content;
+  }
+  }
+  @mixin xxl { @media (min-width: 1920px) and (max-width: 2559.98px) {
+    @content;
+  }
+  }
+  @mixin xxxl { @media (min-width: 2560px) {
+    @content;
+  }
+  }
 html,
 body {
     margin: 0;
@@ -77,7 +104,7 @@ header.banner_section {
 
 button.btn.login-btn {
     padding: 8px 24px;
-    background: #037ef3;
+    background: #c13540;
     color: #fff;
     border: none;
     font-size: 0.9em;
@@ -135,7 +162,7 @@ ul.nav-honey {
 #logo {
     width: 55px;
     height: 55px;
-    background: #037ef3;
+    background: #c13540;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -195,10 +222,14 @@ div#word-mark h1 a {
     padding: 0.5em;
 }
 
+.nav-honey li .lang{
+    width: 50px;
+}
+
 #menu-toggle {
     width: 55px;
     height: 55px;
-    background: #037ef3;
+    background: #c13540;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -254,11 +285,13 @@ div#word-mark h1 a {
 }
 
 .nav-honey li a.active {
-    color: #037ef3;
+    color: #c13540;
 }
 
 
 /*--/banner--*/
+
+/*--/language swicher--*/
 
 /*-- /header --*/
 
@@ -290,12 +323,12 @@ a.btn.work {
     -moz-border-radius: 25px;
     -o-border-radius: 25px;
     -ms-border-radius: 25px;
-    color: #037ef3;
+    color: #c13540;
 }
 
 a.btn.work:hover,
 a.btn.work.active {
-    background: #037ef3;
+    background: #c13540;
     color: #fff;
 }
 
@@ -311,21 +344,27 @@ a.btn.work.active {
     color: #fff;
 }
 
-.banner-info h3 {
+.banner-info .intro-content-pc {
     position: relative;
     color: rgba(0, 0, 0, .3);
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 700;
 }
 
-.banner-info h3:before {
+.banner-info .intro-content-pc:before {
     content: attr(data-text);
     position: absolute;
     overflow: hidden;
-    max-width: 10em;
+    max-width: 30em;
     white-space: nowrap;
     color: #fff;
-    animation: loading 8s linear;
+    animation: loading 5s linear;
+}
+
+.banner-info .intro-content-mobile {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
 }
 
 @keyframes loading {
@@ -340,7 +379,7 @@ a.btn.work.active {
 
 h4.sub-tittle-w3 {
     font-size: 0.85em;
-    color: #037ef3;
+    color: #c13540;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 4px;
@@ -368,12 +407,16 @@ h4.progress-tittle-w3 {
     background: #e1e2e2;
 }
 
+.progress-one img{
+    height: 100px;
+}
+
 /*----*/
 
 /*--//about--*/
 
 .services {
-    background: image-url("serve.jpg") no-repeat 0px 0px;
+    background: image-url("coding.jpg") no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -390,7 +433,7 @@ h4.progress-tittle-w3 {
 }
 
 .service-in .card:hover {
-    background: #037ef3;
+    background: #c13540;
 
 }
 
@@ -608,7 +651,7 @@ p.quia {
 /*-- //gallery --*/
 
 .experience {
-    background: image-url("exp.jpg") no-repeat 0px 0px;
+    // background: image-url("exp.jpg") no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -620,7 +663,7 @@ p.quia {
 /*--/testimonials--*/
 
 .testimonials {
-    background: image-url("testimonials.jpg") no-repeat 0px -94px;
+    background: image-url("review.jpg") no-repeat 0px -94px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -662,7 +705,7 @@ p.quia {
 .testimonials_grid label {
     font-size: 0.7em;
     letter-spacing: 1px;
-    color: #037ef3;
+    color: #c13540;
     text-transform: uppercase;
 }
 
@@ -715,7 +758,7 @@ a.carousel-control-prev.test {
 /*--/contact--*/
 
 .contact {
-    background: image-url("contact.jpg") no-repeat 0px 0px;
+    background: image-url("contact_us.jpg") no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -785,7 +828,7 @@ p.sub {
     padding: 1.2em 3em;
     font-size: 14px;
     color: #fff;
-    background: #037ef3;
+    background: #c13540;
     border: none;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -891,7 +934,7 @@ p.sub {
 }
 
 .login button.btn.btn-primary.submit:hover {
-    background: #037ef3;
+    background: #c13540;
 }
 
 .login a {
@@ -993,14 +1036,14 @@ p.sub {
     color: #fff;
     width: 55px;
     height: 55px;
-    background: #037ef3;
+    background: #c13540;
     border-radius: 50%;
     vertical-align: middle;
     line-height: 2;
 }
 
 .copy-right-w3ls p a {
-    color: #037ef3;
+    color: #c13540;
 }
 
 ul.list-footer li a {
@@ -1038,8 +1081,8 @@ ul.social-icons li a {
 }
 
 ul.social-icons li a:hover {
-    color: #037ef3;
-    border: 2px solid #037ef3;
+    color: #c13540;
+    border: 2px solid #c13540;
 
 }
 
