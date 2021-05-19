@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <nav class="main-header d-flex">
             <div id="brand">
                 <div >
-                    <a href="index.html">
+                    <a href="<%=root_path%>">
                       <%= image_tag 'logo.png', :class => "img-fluid d-none d-md-block p-5" %>
                       <%= image_tag 'logo.png', :class => "img-fluid d-block d-md-none" %>
                     </a>
@@ -61,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <ul class="text-center nav-honey">
                     <li>
-                        <a href="index.html" class="active "><%= t("menu.home")%></a>
+                        <a href="<%=root_path%>" class="active "><%= t("menu.home")%></a>
                     </li>
                     <li>
                         <a class="scroll" href="#about"><%= t("menu.tech")%></a>
@@ -166,19 +166,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <section class="services py-md-5 py-4" id="services">
         <div class="container">
             <div class="inner-sec-w3ls py-md-5 py-4">
-                <h4 class="sub-tittle-w3 text-uppercase text-center">My Services</h4>
-                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">What i do</h3>
+                <h4 class="sub-tittle-w3 text-uppercase text-center"><%= t('services.title') %></h4>
+                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white"><%= t('services.heading') %></h3>
                 <div class="price-right">
                     <div class="tabs">
-                        <ul class="nav nav-pills my-md-5 my-3 justify-content-center" id="pills-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Service 1</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Service 2</a>
-                            </li>
-
-                        </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                 <div class="menu-grids mt-4">
@@ -186,9 +177,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="col-lg-4 service-in text-center" data-aos="flip-up">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <i class="fas fa-list-ul mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">Professional Code</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <i class="fa fa-address-card mb-4"></i>
+                                                    <h5 class="card-title text-uppercase"><%= t('services.service_1.title') %></h5>
+                                                    <p class="card-text"><%= t('services.service_1.content') %></p>
                                                 </div>
                                             </div>
 
@@ -196,9 +187,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="col-lg-4 service-in text-center" data-aos="flip-up">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <i class="far fa-lightbulb mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">Creative Ideas</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <i class="fa fa-shopping-cart mb-4"></i>
+                                                    <h5 class="card-title text-uppercase"><%= t('services.service_2.title') %></h5>
+                                                    <p class="card-text"><%= t('services.service_2.content') %></p>
                                                 </div>
                                             </div>
 
@@ -206,50 +197,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="col-lg-4 service-in text-center" data-aos="flip-up">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <i class="far fa-clone mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">SEO & Marketing</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+                                                    <i class="fa fa-lightbulb-o mb-4"></i>
+                                                    <h5 class="card-title text-uppercase"><%= t('services.service_3.title') %></h5>
+                                                    <p class="card-text"><%= t('services.service_3.content') %></p>
                                                 </div>
                                             </div>
 
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                <div class="menu-grids mt-4">
-                                    <div class="row t-in">
-                                        <div class="col-lg-4 service-in text-center">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <i class="far fa-heart mb-4"></i>
-                                                    <h5 class="card-title">User Friendly</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 service-in text-center">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <i class="fas fa-magic mb-4"></i>
-                                                    <h5 class="card-title">Web Development</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-lg-4 service-in text-center">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <i class="fas fa-sliders-h mb-4"></i>
-                                                    <h5 class="card-title">Portfolio Options</h5>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -263,8 +217,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- /experience -->
     <section class="experience py-lg-5 py-4" id="experience">
         <div class="timeline py-lg-5 py-3">
-            <h4 class="sub-tittle-w3 text-uppercase text-center">Experience</h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Job & Education</h3>
+            <h4 class="sub-tittle-w3 text-uppercase text-center"><%= t('process.title') %></h4>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"><%= t('process.heading') %></h3>
             <div id="my-timeline"></div>
         </div>
 
@@ -273,8 +227,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--gallery  -->
     <section class="gallery py-md-5 py-3" id="projects">
         <div class="gallery-inner container py-md-5 pb-3">
-            <h4 class="sub-tittle-w3 text-uppercase text-center">View all</h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Our Projects</h3>
+            <h4 class="sub-tittle-w3 text-uppercase text-center"><%= t('projects.title') %></h4>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"><%= t('projects.heading') %></h3>
             <div class="row">
                 <div class="col-md-4 proj_gallery_grid">
                     <div class="section_1_gallery_grid">
@@ -316,6 +270,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 <!--end portfolio-area -->
             </div>
+
+            <div class="row">
+                <div class="col-md-12 proj_gallery_grid">
+                    <div class="section_1_gallery_grid" data-aos="zoom-in">
+                        <a title="" href="https://calendly.com/smart5g" target="_blank">
+                            <div class="section_1_gallery_grid1">
+                                <%= image_tag 'featured_banner.png', :class => "img-fluid" %>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <!-- //gallery container -->
         </div>
     </section>
@@ -327,7 +293,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-sm-3 col-6 stats_info counter_grid">
 
                     <i class="fa fa-coffee"></i>
-                    <p class="counter">115</p>
+                    <p class="counter" >115</p>
                     <h4>Cups of Coffee</h4>
 
                 </div>
@@ -357,10 +323,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </section>
     <!--//stats-->
     <!-- /testimonials -->
-    <div class="testimonials py-lg-5 py-4" id="clients">
-        <div class="testimonials-inner container py-lg-4 py-3">
-            <h4 class="sub-tittle-w3 text-uppercase text-center">Testimonials</h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">What They Says</h3>
+    <div class="testimonials py-lg-5 py-4 d-flex" id="clients">
+        <div class="testimonials-inner container py-lg-4 py-3 my-auto">
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"><%= t('why_smart5g.heading') %></h3>
+            <div class="row">
+                <div class="col text-center p-3">
+                    <i class="fa fa-handshake-o fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.service') %></h5>
+                    <i class="fa fa-handshake-o fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.service') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-money fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.price') %></h5>
+                    <i class="fa fa-money fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.price') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-rocket fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.tech') %></h5>
+                    <i class="fa fa-rocket fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.tech') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-tachometer fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.speed') %></h5>
+                    <i class="fa fa-tachometer fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.speed') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-shield fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.guarantee') %></h5>
+                    <i class="fa fa-shield fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.guarantee') %></h6>
+                </div>
+            </div>
+            <!--feed back
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
@@ -412,6 +410,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</a>
                 </div>
             </div>
+            -->
         </div>
     </div>
     <!-- //testimonials -->
@@ -425,54 +424,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <ul class="list-footer" data-aos="fade-up">
                         <li>
                             <a href="#home" class="nav-link scroll">
-                                Home
+                                 <%= t('menu.home') %>
                             </a>
                         </li>
                         <li class="my-2">
                             <a href="#about" class="nav-link scroll">
-                               About
+                               <%= t('menu.tech') %>
                             </a>
                         </li>
                         <li class="my-2">
                             <a href="#services" class="nav-link scroll">
-                               Services
+                               <%= t('menu.services') %>
                             </a>
                         </li>
                         <li class="mb-2">
                             <a href="#projects" class="nav-link scroll">
-                              Projects
+                              <%= t('menu.projects') %>
                             </a>
                         </li>
                         <li>
                             <a href="#contact" class="nav-link scroll">
-                                Contact Us
+                                <%= t('menu.contact') %>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 mt-sm-5">
-                    <ul class="list-footer" data-aos="fade-up">
-                        <li>
-                            <a href="#register" data-toggle="modal" data-target="#exampleModalCenter" class="nav-link scroll">
-                                Login
-                            </a>
-                        </li>
-                        <li class="my-2">
-                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter2" class="nav-link">
-                               Register
-                            </a>
-                        </li>
-                        <li class="my-2">
-                            <a href="#" class="nav-link">
-                                License
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="offset-lg-4"></div>
+                <div class="offset-lg-6"></div>
                 <div class="col-lg-4 footer-end-grid mt-md-0 mt-sm-5" data-aos="fade-up">
                     <h2>
-                        <a href="index.html">
+                        <a href="<%=root_path%>">
                             <%= image_tag 'logo.png', :class => "img-fluid p-5" %>
                         </a>
                     </h2>
@@ -481,31 +461,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <hr>
             <div class="d-flex justify-content-between pt-lg-3  footer-bottom-cpy">
                 <div class="copy-right-w3ls">
-                    <p>© 2018 Recognize. All rights reserved | Design by
+                    <p>© 2021 Smart5G. All rights reserved | Design by
                         <a href="http://w3layouts.com/"> W3layouts </a>
-
                     </p>
                 </div>
                 <div class="social-content pb-md-0 pb-4">
                     <ul class="social-icons text-center d-flex">
                         <li class="ml-lg-5">
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>
+                            <a target="_blank" href="https://www.facebook.com/smart5g.vn">
+                                <i class="fa fa-facebook-f"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-google-plus-g"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-linkedin-in"></i>
+                            <a target="_blank" href="https://www.linkedin.com/company/smart5g/">
+                                <i class="fa fa-linkedin"></i>
                             </a>
                         </li>
                     </ul>
@@ -658,55 +627,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         $(document).ready(function() {
 
             var events = [{
-                    date: 'Oct 2018 - Present',
-                    content: 'Company Name <small>Co-founder, Front-end Designer</small>'
+                    date: '<%= t('process.step_1.name') %>',
+                    content: '<%= t('process.step_1.content') %>'
                 },
                 {
-                    date: '2016 - 2018',
-                    content: 'Company Name <small>Senior Visual Designer</small>'
+                    date: '<%= t('process.step_2.name') %>',
+                    content: '<%= t('process.step_2.content') %>'
                 },
                 {
-                    date: '2013 - 2016',
-                    content: 'Company Name <small>Mid-level Designer</small>'
+                    date: '<%= t('process.step_3.name') %>',
+                    content: '<%= t('process.step_3.content') %>'
                 },
                 {
-                    date: '2012 - 2013',
-                    content: 'Company Name <small>Mid-level Designer</small>'
+                    date: '<%= t('process.step_4.name') %>',
+                    content: '<%= t('process.step_4.content') %>'
                 },
                 {
-                    date: '2012 - 2013',
-                    content: 'Company Name <small>Freelance</small>'
+                    date: '<%= t('process.step_5.name') %>',
+                    content: '<%= t('process.step_5.content') %>'
                 },
                 {
-                    date: '2011 - 2012',
-                    content: 'San Diego university  <small>For Design</small>'
-                },
-                {
-                    date: '2010 - 2011',
-                    content: 'New York university  <small>For Graphic Design</small>'
-                },
-
-                {
-                    date: '2009 - 2010',
-                    content: 'New York university  <small>For Graphic Design</small>'
-                },
-
-                {
-                    date: '2008 - 2009',
-                    content: 'New York university  <small>For Graphic Design</small>'
-                },
-                {
-                    date: '2005 - 2008',
-                    content: 'Lorem Ipsum  <small>Add Description</small>'
-                },
-                {
-                    date: '2003 - 2005',
-                    content: 'Lorem IPsum  <small>Add Description</small>'
-                },
-                {
-                    date: '2001 - 2003',
-                    content: 'Lorem IPsum  <small>Add Description</small>'
+                    date: '<%= t('process.step_6.name') %>',
+                    content: '<%= t('process.step_6.content') %>'
                 }
+                
             ];
 
             $('#my-timeline').roadmap(events, {

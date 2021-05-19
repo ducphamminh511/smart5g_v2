@@ -3,7 +3,7 @@ class ContactMailer < ApplicationMailer
     def thanks_mail
         @customer = params[:customer]
         
-        mail(to: @customer.mail, subject: "Thank you for your message")
+        mail(to: @customer.mail, subject: "[Smart5G] Thank you for your message")
     end
 
     def notification_mail

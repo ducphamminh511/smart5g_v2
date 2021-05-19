@@ -43,3 +43,53 @@ en:
     project_btn: "Our Projects"
     contact_btn: "Contact US"
   tech_heading: "Technologies That We're Using"
+  services:
+    title: "Our Services"
+    heading: "What we do"
+    service_1: 
+      title: "Business/personal website"
+      content: "We provide website development service for your business portfolio and for personal use"
+    service_2: 
+      title: "E-commerce website"
+      content: "we provide e-commerce website development and sales management website"
+    service_3: 
+      title: "IT Solutions"
+      content: "Your business need IT Solutions to increase website performance & optimization for e-commerce website? - Contact us now"
+  process:
+    title: "Process"
+    heading: "How we do"
+    step_1:
+      name: "Step 1"
+      content: "RECEIVE REQUIREMENTS FROM CLIENT"
+    step_2:
+      name: "Step 2"
+      content: "PROJECT ESTIMATION"
+    step_3:
+      name: "Step 3"
+      content: "PROPOSE QUOTATION"
+    step_4:
+      name: "Step 4"
+      content: "DEVELOPING"
+    step_5:
+      name: "Step 5"
+      content: "WEEKLY DEMO & RELEASE"
+    step_6:
+      name: "Final"
+      content: "YOUR SATISFACTION - OUR SUCCESS"
+  projects:
+    title: "portfolio"
+    heading: "Our projects"
+  contact:
+    heading: "Contact us now"
+    name: "Your name"
+    mail: "Your email"
+    phone: "Your phone number"
+    message: "Your message"
+    submit: "Submit"
+  why_smart5g:
+    heading: "Why Smart5G"
+    service: "Good Serivices"
+    price: "Good Price"
+    tech: "Good Technologies and Solutions"
+    speed: "Good Project Completion Speed"
+    guarantee: "Good Guarantee Policy"

@@ -43,3 +43,53 @@ vi:
     project_btn: "Dự án"
     contact_btn: "Liên hệ"
   tech_heading: "Công nghệ chúng tôi đang sử dụng"
+  services:
+    title: "Dịch vụ"
+    heading: "Chúng tôi làm những gì?"
+    service_1: 
+      title: "Website Cá nhân - Doanh nghiệp"
+      content: "Chúng tôi sẽ giúp bạn xây dựng website cho doanh nghiệp hoặc cho mục đích cá nhân"
+    service_2: 
+      title: "Website thương mại điện tử"
+      content: "Chúng tôi cung cấp dịch vụ xây dựng và phát triển website thương mại điện tử, website bán hàng"
+    service_3: 
+      title: "Giải pháp công nghệ thông tin"
+      content: "Nếu doanh nghiệp hoặc công việc kinh doanh của bạn cần ứng dụng công nghệ thông tin để giải quyết các vấn đề và tăng hiệu suất- Hãy liên hệ với chúng tôi"
+  process:
+    title: "Quy trình"
+    heading: "Cách chúng tôi thực hiện"
+    step_1:
+      name: "Bước 1"
+      content: "Nhận yêu cầu từ khách hàng"
+    step_2:
+      name: "Bước 2"
+      content: "Ước tính dự án"
+    step_3:
+      name: "Bước 3"
+      content: "Báo giá"
+    step_4:
+      name: "Bước 4"
+      content: "Tiến hành dự án"
+    step_5:
+      name: "Bước 5"
+      content: "DEMO & RELEASE Theo tuần"
+    step_6:
+      name: "Final"
+      content: "Sự hài lòng của khách hàng - Thành công của chúng tôi"
+  projects:
+    title: "Thư viện"
+    heading: "Dự án của chúng tôi"
+  contact:
+    heading: "Liên hệ với chúng tôi"
+    name: "Tên của bạn"
+    mail: "Email của bạn"
+    phone: "Số điện thoại của bạn"
+    message: "Lời nhắn"
+    submit: "Gửi"
+  why_smart5g:
+    heading: "Why Smart5G"
+    service: "Good Serivices"
+    price: "Good Price"
+    tech: "Good Technologies and Solutions"
+    speed: "Good Project Completion Speed"
+    guarantee: "Good Guarantee Policy"

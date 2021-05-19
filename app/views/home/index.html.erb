@@ -2,32 +2,31 @@
     <section class="contact py-lg-5 py-md-5 py-3" id="contact">
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-3">
-                <h4 class="sub-tittle-w3 text-uppercase text-center">Find Me</h4>
-                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">Contact Me Now</h3>
+                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white"><%= t('contact.heading') %></h3>
 
                 <div class="contact_grid_right">
                     <%= form_with url: contacts_path, method: :post do |form| %>
                         <div class="row contact_left_grid">
                             <div class="col-md-6 con-left" data-aos="fade-up">
                                 <div class="form-group">
-                                    <%= form.text_field :name, placeholder: 'Your name' %>
+                                    <%= form.text_field :name, placeholder: t('contact.name') %>
                                 </div>
                                 <div class="form-group">
-                                    <%= form.email_field :mail, placeholder: 'Your email' %>
+                                    <%= form.email_field :mail, placeholder: t('contact.mail') %>
                                 </div>
                                 <div class="form-group">
-                                    <%= form.text_field :phone_number, placeholder: 'Your phone number' %>
+                                    <%= form.text_field :phone_number, placeholder: t('contact.phone') %>
                                 </div>
                             </div>
                         <div class="col-md-6 con-right" data-aos="fade-up">
                                 <div class="form-group">
-                                    <%= form.text_area :message, placeholder: 'Your message' %>
+                                    <%= form.text_area :message, placeholder: t('contact.message') %>
                                 </div>
                                 
                         </div>
                         </div>
                         <div class="sub-honey mx-auto mt-3 text-center">
-                            <%= form.submit "Submit" %>
+                            <%= form.submit t('contact.submit') %>
                         </div>
                     <% end %>
                 </div>
@@ -41,7 +40,7 @@
                             <div class="address-right text-center">
                                 <h6 class="my-3">Address</h6>
                                 <p> 
-                                    Lam Son str., Tan Binh Dist., HCMC
+                                    Lam Son Str., Tan Binh Dist., HCMC, Vietnam
                                 </p>
                             </div>
                         </div>
