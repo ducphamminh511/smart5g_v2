@@ -2,6 +2,7 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
+//= require jquery.lazyload
 //= require aos
 //= require easing
 //= require jquery.countup

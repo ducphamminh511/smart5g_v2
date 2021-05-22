@@ -346,20 +346,22 @@ a.btn.work.active {
 
 .banner-info .intro-content-pc {
     position: relative;
-    color: rgba(0, 0, 0, .3);
+    // color: rgba(0, 0, 0, .3);
+    color: #fff;
     font-size: 3.5em;
     font-weight: 700;
+    max-width: 90%;
 }
 
-.banner-info .intro-content-pc:before {
-    content: attr(data-text);
-    position: absolute;
-    overflow: hidden;
-    max-width: 30em;
-    white-space: nowrap;
-    color: #fff;
-    animation: loading 5s linear;
-}
+// .banner-info .intro-content-pc:before {
+//     content: attr(data-text);
+//     position: absolute;
+//     overflow: hidden;
+//     max-width: 30em;
+//     white-space: nowrap;
+//     color: #fff;
+//     animation: loading 5s linear;
+// }
 
 .banner-info .intro-content-mobile {
     position: relative;

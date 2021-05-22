@@ -49,6 +49,7 @@ gem 'meta_request', '~> 0.5.0'
 gem "select2-rails"
 gem "font-awesome-rails"
 
+gem "lazyload-rails"
 #Use CKeditor
 # gem 'ckeditor', '~> 4.3.0'
 # gem 'carrierwave'

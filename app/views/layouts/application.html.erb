@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
-    <meta name="keywords" content="Recognize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="keywords" content="" />
     <script>
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
@@ -30,9 +30,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     <!-- Font-Awesome-Icons-CSS -->
     <!-- /Fonts -->
-    <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700,700i,900" rel="stylesheet">
+    <link rel="preload" href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700,700i,900" rel="stylesheet">
     <!-- //Fonts -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -79,8 +80,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div id="brand">
                 <div >
                     <a href="<%=root_path%>">
-                      <%= image_tag 'logo.png', :class => "img-fluid d-none d-md-block p-5" %>
-                      <%= image_tag 'logo.png', :class => "img-fluid d-block d-md-none" %>
+                      <%= image_tag 'logo.png', :class => "img-fluid d-none d-md-block p-5",  lazy: true %>
+                      <%= image_tag 'logo.png', :class => "img-fluid d-block d-md-none",  lazy: true %>
                     </a>
                 </div>
                 
@@ -150,6 +151,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //header -->
     <!--// banner-slider -->
     <!-- banner-bottom-wthree -->
+     
     <section class="banner-bottom-wthree py-lg-5 py-md-5 py-4" id="about">
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-4">
@@ -159,33 +161,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="col-lg-4 progress-info-content text-center">
                             <div class="progress-one my-lg-5" data-aos="fade-up">
                                 <h4 class="progress-tittle-w3">Shopify</h4>
-                                <%= image_tag 'shopify_logo.png', :class => "img-fluid" %>
+                                <%= image_tag 'shopify_logo.png', :class => "img-fluid",  lazy: true %>
                                 
                             </div>
                             <div class="progress-one" data-aos="fade-up">
                                 <h4 class="progress-tittle-w3">Woo Commerce</h4>
-                                <%= image_tag 'woo_logo.png', :class => "img-fluid" %>
+                                <%= image_tag 'woo_logo.png', :class => "img-fluid",  lazy: true %>
                             </div>
 
                         </div>
                         <div class="col-lg-4 progress-info-content text-center">
                             <div class="progress-one my-lg-5" data-aos="fade-up">
                                 <h4 class="progress-tittle-w3">Ruby On Rails</h4>
-                                <%= image_tag 'rails_logo.png', :class => "img-fluid" %>
+                                <%= image_tag 'rails_logo.png', :class => "img-fluid",  lazy: true %>
                             </div>
                             <div class="progress-one" data-aos="fade-up">
                                 <h4 class="progress-tittle-w3">ReactJS</h4>
-                                <%= image_tag 'react_logo.png', :class => "img-fluid" %>
+                                <%= image_tag 'react_logo.png', :class => "img-fluid",  lazy: true %>
                             </div>
                         </div>
                         <div class="col-lg-4 progress-info-content text-center">
                             <div class="progress-one my-lg-5" data-aos="fade-up">
                                 <h4 class="progress-tittle-w3">Bootstrap</h4>
-                                <%= image_tag 'bootstrap_logo.png', :class => "img-fluid" %>
+                                <%= image_tag 'bootstrap_logo.png', :class => "img-fluid",  lazy: true %>
                             </div>
                             <div class="progress-one" data-aos="fade-up">
                                 <h4 class="progress-tittle-w3">Wordpress</h4>
-                               <%= image_tag 'wordpress_logo.png', :class => "img-fluid" %>
+                               <%= image_tag 'wordpress_logo.png', :class => "img-fluid",  lazy: true %>
                             </div>
 
 
@@ -253,7 +255,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="timeline py-lg-5 py-3">
             <h4 class="sub-tittle-w3 text-uppercase text-center"><%= t('process.title') %></h4>
             <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"><%= t('process.heading') %></h3>
-            <div id="my-timeline"></div>
+            <div id="my-timeline" data-aos="fade-right"></div>
         </div>
 
     </section>
@@ -268,7 +270,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid">
                         <a href="https://www.perromart.com.sg" target="_blank" >
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'perromart_website.jpg', :class => "img-fluid" %>
+                                <%= image_tag 'perromart_website.jpg', :class => "img-fluid",  lazy: true %>
                                 <div class="proj_gallery_grid1_pos">
                                     <h3>Perromart</h3>
                                 </div>
@@ -280,7 +282,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
                         <a title="" href="https://twippy.co/" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'twippy_website.jpg', :class => "img-fluid" %>
+                                <%= image_tag 'twippy_website.jpg', :class => "img-fluid",  lazy: true %>
                                 <div class="proj_gallery_grid1_pos">
                                     <h3>Twippy</h3>
                                 </div>
@@ -293,7 +295,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid">
                         <a title="" href="https://witchcraft101.com/" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'witchraft_website.jpg', :class => "img-fluid" %>
+                                <%= image_tag 'witchraft_website.jpg', :class => "img-fluid",  lazy: true %>
                                 <div class="proj_gallery_grid1_pos">
                                     <h3>Witchcraft</h3>
                                 </div>
@@ -310,7 +312,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
                         <a title="" href="https://calendly.com/smart5g" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'featured_banner.png', :class => "img-fluid" %>
+                                <%= image_tag 'featured_banner.png', :class => "img-fluid",  lazy: true %>
                             </div>
                         </a>
                     </div>
@@ -484,10 +486,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </ul>
                 </div>
                 <div class="offset-lg-6"></div>
-                <div class="col-lg-4 footer-end-grid mt-md-0 mt-sm-5" data-aos="fade-up">
+                <div class="col-lg-4 footer-end-grid mt-md-0 mt-sm-5" >
                     <h2>
                         <a href="<%=root_path%>">
-                            <%= image_tag 'logo.png', :class => "img-fluid p-5" %>
+                            <%= image_tag 'logo.png', :class => "img-fluid p-5",  lazy: true %>
                         </a>
                     </h2>
                 </div>
@@ -517,7 +519,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </footer>
     <!--//footer-->
-
+ <script>
+     $("img").lazyload();
+    </script>
     <!--model-forms-->
     <!--/Login-->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
@@ -604,14 +608,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <!--//Register-->
 
-
+   
   
     <script>
-        AOS.init({
-            easing: 'ease-out-back',
-            duration: 1000
-        });
-
+         AOS.init({
+                easing: 'ease-out-back',
+                duration: 1000,
+                offset: -120,
+            });
     </script>
     <!-- sticky nav bar-->
     <script>
@@ -740,6 +744,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--// end-smoth-scrolling -->
 
     <!-- //js -->
+
+   
 
 
 </body>
