@@ -39,7 +39,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
     
     <!-- Font-Awesome-Icons-CSS -->
     <!-- /Fonts -->
@@ -124,7 +124,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <% if I18n.locale == :en %>
                         <li>
                             <a href="/vi" class="lang m-auto">
-                                <%= image_tag('flag-vi.png', style: 'width:100%')%>
+                                <%= image_tag('flag-vi.jpeg', style: 'width:100%')%>
                             </a>
                         </li>
                     <% end %>
@@ -133,7 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <li> 
                             
                             <a href="/en" class="lang m-auto">
-                                <%= image_tag('flag-usa.png', style: 'width:100%')%>
+                                <%= image_tag('flag-usa.jpeg', style: 'width:100%')%>
                             </a>
                         </li>
                     <% end %>
@@ -280,7 +280,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid">
                         <a href="https://www.perromart.com.sg" target="_blank" >
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'perromart_website.jpg', :class => "img-fluid",  lazy: true %>
+                                <%= image_tag 'perromart_website.webp', :class => "img-fluid",  lazy: true %>
                                 <div class="proj_gallery_grid1_pos">
                                     <h3>Perromart</h3>
                                 </div>
@@ -292,7 +292,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
                         <a title="" href="https://twippy.co/" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'twippy_website.jpg', :class => "img-fluid",  lazy: true %>
+                                <%= image_tag 'twippy_website.webp', :class => "img-fluid",  lazy: true %>
                                 <div class="proj_gallery_grid1_pos">
                                     <h3>Twippy</h3>
                                 </div>
@@ -305,7 +305,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid">
                         <a title="" href="https://witchcraft101.com/" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'witchraft_website.jpg', :class => "img-fluid",  lazy: true %>
+                                <%= image_tag 'witchraft_website.webp', :class => "img-fluid",  lazy: true %>
                                 <div class="proj_gallery_grid1_pos">
                                     <h3>Witchcraft</h3>
                                 </div>
@@ -322,7 +322,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
                         <a title="" href="https://calendly.com/smart5g" target="_blank">
                             <div class="section_1_gallery_grid1">
-                                <%= image_tag 'featured_banner.png', :class => "img-fluid",  lazy: true %>
+                                <%= image_tag 'featured_banner.webp', :class => "img-fluid",  lazy: true %>
                             </div>
                         </a>
                     </div>
@@ -529,7 +529,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </footer>
     <!--//footer-->
- <script>
+
+     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script>
      $("img").lazyload();
     </script>
     <!--model-forms-->
