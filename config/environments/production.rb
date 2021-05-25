@@ -35,11 +35,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp 
   config.action_mailer.smtp_settings = 
   { 
-    address: 'smtp.zoho.com', 
-    port: 465, 
-    user_name: 'benz@smart5g.vn', 
-    domain: 'smart5g.vn', 
-    password: 'AcuteDog2020',
+    address: ENV['SMTP_ADRESS'], 
+    port: ENV['SMTP_PORT'], 
+    user_name: ENV['MAIL_USERNAME'], 
+    domain: ENV['SMTP_DOMAIN'], 
+    password: ENV['MAIL_PASSWORD'],
     authentication: 'plain', 
     ssl: true 
   } 
