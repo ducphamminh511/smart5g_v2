@@ -5,3 +5,17 @@
 @import "roadmap.css";
 @import "simpleLightbox.css";
 @import "style.css";
+
+.alert-dismissible {
+    padding-left: $close-font-size + $alert-padding-x * 2;
+}
+.alert-pc{
+    position: absolute;
+    top: 10%;
+    right: 10px;
+}
+.alert-mobile{
+    position: fixed;
+    bottom: 1%;
+    z-index: 10000;
+}

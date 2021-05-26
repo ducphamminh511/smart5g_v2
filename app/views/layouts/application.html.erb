@@ -58,6 +58,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body>
+<% flash.each do |key, message| %>
+        <div class="d-block d-md-none alert <%= flash_class(key) %> alert-dismissible fade show text-center alert-mobile" role="alert">
+            <%= message %>
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        <% end %>
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
       <script>
@@ -142,8 +148,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="clearfix"></div>
         </nav>
         <!-- //nav -->
+       
         <!-- banner -->
         <div class="banner_section">
+         <% flash.each do |key, message| %>
+        <div class="d-none d-md-block alert <%= flash_class(key) %> alert-dismissible fade show text-center alert-pc" role="alert">
+            <%= message %>
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        <% end %>
             <div class="banner-info text-uppercase">
                 <h6 data-aos="fade-right"><%= t("banner.intro")%></h6>
                 <h5 data-aos="fade-right"><%= t("banner.hello")%></h5>
@@ -161,7 +174,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //header -->
     <!--// banner-slider -->
     <!-- banner-bottom-wthree -->
-     
+    
     <section class="banner-bottom-wthree py-lg-5 py-md-5 py-4" id="about">
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-4">
@@ -754,7 +767,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     </script>
     <!--// end-smoth-scrolling -->
-
+    <script>
+        $(".alert-pc").fadeTo(2000, 500).slideUp(500, function(){
+            $(".alert-pc").slideUp(500);
+            $(".alert-pc").removeClass("d-md-block");
+        });
+        $(".alert-mobile").fadeTo(2000, 500).slideUp(500, function(){
+            $(".alert-mobile").slideUp(500);
+            $(".alert-mobile").removeClass("d-block");
+        });
+    </script>
     <!-- //js -->
 
    

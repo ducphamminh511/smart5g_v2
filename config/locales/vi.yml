@@ -86,6 +86,8 @@ vi:
     phone: "Số điện thoại của bạn"
     message: "Lời nhắn"
     submit: "Gửi"
+    flash_success: "Cảm ơn vì lời nhắn. Chúng tôi sẽ liên hệ với bạn sớm. Vui lòng kiểm tra email, bao gồm thư mục spam."
+    flash_error: "Rất tiếc, đã xảy ra lỗi"
   why_smart5g:
     heading: "Why Smart5G"
     service: "Good Services"

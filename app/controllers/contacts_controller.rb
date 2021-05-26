@@ -4,14 +4,15 @@ class ContactsController < ApplicationController
 
     def create
         @contact = Contact.new(contact_params)
-        puts @contact.inspect
+        # puts @contact.inspect
         if @contact.save
-            flash[:notice] = "Thanks for your message"
             ContactMailer.with(customer: @contact).thanks_mail.deliver_later
             ContactMailer.with(customer: @contact).notification_mail.deliver_later
+            flash[:success] = t('contact.flash_success')
             redirect_to root_path
         else
-            redirect_to root_path, alert: "Something went wrong"
+            flash[:error] = t('contact.flash_error')
+            redirect_to root_path
         end
     end
 

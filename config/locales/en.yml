@@ -86,6 +86,8 @@ en:
     phone: "Your phone number"
     message: "Your message"
     submit: "Submit"
+    flash_success: "Thanks for your message. We'll get back to you soon. Please check email, include spam folder."
+    flash_error: "Oops, something went wrong"
   why_smart5g:
     heading: "Why Smart5G"
     service: "Good Services"
