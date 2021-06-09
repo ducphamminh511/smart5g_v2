@@ -36,6 +36,7 @@ vi:
     services: "Dịch vụ"
     projects: "Dự án"
     contact: "Liên hệ"
+    vcards: "Vcard QRCode"
   banner:
     intro: "Giới thiệu"
     hello: "Xin chào, đây là Smart5G"
@@ -85,8 +86,16 @@ vi:
     mail: "Email của bạn"
     phone: "Số điện thoại của bạn"
     message: "Lời nhắn"
+    address: "Địa chỉ của bạn"
+    organization: "Công ty/cơ quan của bạn"
+    website: "Website của bạn"
     submit: "Gửi"
     flash_success: "Cảm ơn vì lời nhắn. Chúng tôi sẽ liên hệ với bạn sớm. Vui lòng kiểm tra email, bao gồm thư mục spam."
+    flash_error: "Rất tiếc, đã xảy ra lỗi"
+  vcards:
+    heading: "Công cụ tạo mã QRCode để chia sẻ thông tin liên lạc"
+    submit: "Tạo mã"
+    flash_success: "Hãy chụp lại màn hình để có thể dùng mã QRcode"
     flash_error: "Rất tiếc, đã xảy ra lỗi"
   why_smart5g:
     heading: "Why Smart5G"

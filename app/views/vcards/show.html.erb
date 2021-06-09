@@ -1,0 +1,44 @@
+<section class="w3l-coming-soon-page">
+    <div class="coming-page-info-6">
+        <div class="wrapper">
+            <div class="container">
+            <div class="row">
+                <div class="offset-md-4"></div>
+                <div class="col-md-4 text-center"><div class="logo">
+                    <a href="<%=root_path%>">
+                      <%= image_tag 'logo.png', :class => "img-fluid d-none d-md-block p-5",  lazy: true %>
+                      <%= image_tag 'logo.png', :class => "img-fluid d-block d-md-none",  lazy: true %>
+                    </a>
+                </div>
+                
+            </div>
+                
+                
+            </div>
+            <div class="coming-block">
+                <h3 class="text-white"><%=@vcard.name%></h3>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                    <div class="qrcode mx-auto"><%= image_tag('qrcode.png')%></div>
+                    <%= link_to 'Download', download_qrcode_path %>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="copyright-footer">
+                <div class="w3l-copy-right-left">
+                    <p>© 2021 Smart5G. Made with <span class="fa fa-heart"></span></p>
+                </div>
+                <div class="w3l-copy-right">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/smart5g.vn"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
+                        <li><a href="https://www.linkedin.com/company/smart5g/"><span class="fa fa-linkedin" aria-hidden="true"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- //coming-61-w3l-vv-section -->

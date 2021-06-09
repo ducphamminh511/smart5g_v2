@@ -1,4 +1,392 @@
-<!-- /Contact-->
+<!-- mian-content -->
+      <header class="index-banner" id="home">
+        <!-- nav -->
+        <nav class="main-header d-flex">
+            <div id="brand">
+                <div >
+                    <a href="<%=root_path%>">
+                      <%= image_tag 'logo.png', :class => "img-fluid d-none d-md-block p-5",  lazy: true %>
+                      <%= image_tag 'logo.png', :class => "img-fluid d-block d-md-none",  lazy: true %>
+                    </a>
+                </div>
+                
+            </div>
+            <div id="menu">
+                <div id="menu-toggle">
+                    <div id="menu-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <ul class="text-center nav-honey">
+                    <li>
+                        <a href="<%=root_path%>" class="active "><%= t("menu.home")%></a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#about"><%= t("menu.tech")%></a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#services"><%= t("menu.services")%></a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#projects"><%= t("menu.projects")%></a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#contact"><%= t("menu.contact")%></a>
+                    </li>
+
+                    <li>
+                        <a class="m-auto" href="<%=vcards_path%>"><%= t("menu.vcards")%></a>
+                    </li>
+                     
+                    <% if I18n.locale == :en %>
+                        <li>
+                            <a href="/vi" class="lang m-auto">
+                                <%= image_tag('flag-vi.jpeg', style: 'width:100%')%>
+                            </a>
+                        </li>
+                    <% end %>
+                
+                    <% if I18n.locale == :vi %>
+                        <li> 
+                            
+                            <a href="/en" class="lang m-auto">
+                                <%= image_tag('flag-usa.jpeg', style: 'width:100%')%>
+                            </a>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </nav>
+        <!-- //nav -->
+       
+        <!-- banner -->
+        <div class="banner_section">
+         <% flash.each do |key, message| %>
+        <div class="d-none d-md-block alert <%= flash_class(key) %> alert-dismissible fade show text-center alert-pc" role="alert">
+            <%= message %>
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        <% end %>
+            <div class="banner-info text-uppercase">
+                <h6 data-aos="fade-right"><%= t("banner.intro")%></h6>
+                <h5 data-aos="fade-right"><%= t("banner.hello")%></h5>
+                <h3 class="d-none d-md-block intro-content-pc" data-text="<%= t("banner.content")%>"><%= t("banner.content")%></h3>
+                <h3 class="d-block d-md-none intro-content-mobile" ><%= t("banner.content")%></h3>
+                <div class="ban-buttons mt-3" data-aos="fade-right">
+                    <a class="btn work scroll" href="#projects"><%= t("banner.project_btn")%></a>
+                    <a class="btn work scroll active" href="#contact"><%= t("banner.contact_btn")%></a>
+                </div>
+
+            </div>
+        </div>
+        <!-- //banner -->
+    </header>
+    <!-- //header -->
+    <!--// banner-slider -->
+    <!-- banner-bottom-wthree -->
+    
+    <section class="banner-bottom-wthree py-lg-5 py-md-5 py-4" id="about">
+        <div class="container">
+            <div class="inner-sec-w3ls py-lg-5 py-4">
+                <div class="info-about text-center">
+                    <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3"><%= t('tech_heading') %></h3>
+                    <div class="row mt-lg-5 mt-3">
+                        <div class="col-lg-4 progress-info-content text-center">
+                            <div class="progress-one my-lg-5" data-aos="fade-up">
+                                <h4 class="progress-tittle-w3">Shopify</h4>
+                                <%= image_tag 'shopify_logo.png', :class => "img-fluid",  lazy: true %>
+                                
+                            </div>
+                            <div class="progress-one" data-aos="fade-up">
+                                <h4 class="progress-tittle-w3">Woo Commerce</h4>
+                                <%= image_tag 'woo_logo.png', :class => "img-fluid",  lazy: true %>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 progress-info-content text-center">
+                            <div class="progress-one my-lg-5" data-aos="fade-up">
+                                <h4 class="progress-tittle-w3">Ruby On Rails</h4>
+                                <%= image_tag 'rails_logo.png', :class => "img-fluid",  lazy: true %>
+                            </div>
+                            <div class="progress-one" data-aos="fade-up">
+                                <h4 class="progress-tittle-w3">ReactJS</h4>
+                                <%= image_tag 'react_logo.png', :class => "img-fluid",  lazy: true %>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 progress-info-content text-center">
+                            <div class="progress-one my-lg-5" data-aos="fade-up">
+                                <h4 class="progress-tittle-w3">Bootstrap</h4>
+                                <%= image_tag 'bootstrap_logo.png', :class => "img-fluid",  lazy: true %>
+                            </div>
+                            <div class="progress-one" data-aos="fade-up">
+                                <h4 class="progress-tittle-w3">Wordpress</h4>
+                               <%= image_tag 'wordpress_logo.png', :class => "img-fluid",  lazy: true %>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// ab -->
+    <!-- /services -->
+    <section class="services py-md-5 py-4" id="services">
+        <div class="container">
+            <div class="inner-sec-w3ls py-md-5 py-4">
+                <h4 class="sub-tittle-w3 text-uppercase text-center"><%= t('services.title') %></h4>
+                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white"><%= t('services.heading') %></h3>
+                <div class="price-right">
+                    <div class="tabs">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="menu-grids mt-4">
+                                    <div class="row t-in">
+                                        <div class="col-lg-4 service-in text-center" data-aos="flip-up">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <i class="fa fa-address-card mb-4"></i>
+                                                    <h5 class="card-title text-uppercase"><%= t('services.service_1.title') %></h5>
+                                                    <p class="card-text"><%= t('services.service_1.content') %></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4 service-in text-center" data-aos="flip-up">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <i class="fa fa-shopping-cart mb-4"></i>
+                                                    <h5 class="card-title text-uppercase"><%= t('services.service_2.title') %></h5>
+                                                    <p class="card-text"><%= t('services.service_2.content') %></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4 service-in text-center" data-aos="flip-up">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <i class="fa fa-lightbulb-o mb-4"></i>
+                                                    <h5 class="card-title text-uppercase"><%= t('services.service_3.title') %></h5>
+                                                    <p class="card-text"><%= t('services.service_3.content') %></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //services -->
+    <!-- /experience -->
+    <section class="experience py-lg-5 py-4" id="experience">
+        <div class="timeline py-lg-5 py-3">
+            <h4 class="sub-tittle-w3 text-uppercase text-center"><%= t('process.title') %></h4>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"><%= t('process.heading') %></h3>
+            <div id="my-timeline" data-aos="fade-right"></div>
+        </div>
+
+    </section>
+    <!-- //experience -->
+    <!--gallery  -->
+    <section class="gallery py-md-5 py-3" id="projects">
+        <div class="gallery-inner container py-md-5 pb-3">
+            <h4 class="sub-tittle-w3 text-uppercase text-center"><%= t('projects.title') %></h4>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"><%= t('projects.heading') %></h3>
+            <div class="row">
+                <div class="col-md-4 proj_gallery_grid">
+                    <div class="section_1_gallery_grid">
+                        <a href="https://www.perromart.com.sg" target="_blank" >
+                            <div class="section_1_gallery_grid1">
+                                <%= image_tag 'perromart_website.webp', :class => "img-fluid",  lazy: true %>
+                                <div class="proj_gallery_grid1_pos">
+                                    <h3>Perromart</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                    <div class="section_1_gallery_grid" data-aos="zoom-in">
+                        <a title="" href="https://twippy.co/" target="_blank">
+                            <div class="section_1_gallery_grid1">
+                                <%= image_tag 'twippy_website.webp', :class => "img-fluid",  lazy: true %>
+                                <div class="proj_gallery_grid1_pos">
+                                    <h3>Twippy</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                   
+                </div>
+                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                    <div class="section_1_gallery_grid">
+                        <a title="" href="https://witchcraft101.com/" target="_blank">
+                            <div class="section_1_gallery_grid1">
+                                <%= image_tag 'witchraft_website.webp', :class => "img-fluid",  lazy: true %>
+                                <div class="proj_gallery_grid1_pos">
+                                    <h3>Witchcraft</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--end portfolio-area -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 proj_gallery_grid">
+                    <div class="section_1_gallery_grid" data-aos="zoom-in">
+                        <a title="" href="https://calendly.com/smart5g" target="_blank">
+                            <div class="section_1_gallery_grid1">
+                                <%= image_tag 'featured_banner.webp', :class => "img-fluid",  lazy: true %>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- //gallery container -->
+        </div>
+    </section>
+    <!-- //gallery -->
+    <!--/stats-->
+    <section class="stats py-lg-5 py-4" id="stats">
+        <div class="gallery-inner container py-md-5 py-4">
+            <div class="row mt-lg-5 stats-con text-white">
+                <div class="col-sm-3 col-6 stats_info counter_grid">
+
+                    <i class="fa fa-coffee"></i>
+                    <p class="counter" >1105</p>
+                    <h4>Cups of Coffee</h4>
+
+                </div>
+                <div class="col-sm-3 col-6 stats_info counter_grid2">
+
+                    <i class="fa fa-clock-o"></i>
+                    <p class="counter">10496</p>
+                    <h4>Coding Hours</h4>
+
+                </div>
+                <div class="col-sm-3 col-6 stats_info counter_grid">
+
+                    <i class="fa fa-trophy"></i>
+                    <p class="counter">3</p>
+                    <h4>Successful Projects</h4>
+
+                </div>
+                <div class="col-sm-3 col-6 stats_info counter_grid1">
+
+                    <i class="fa fa-heart"></i>
+                    <p class="counter">2</p>
+                    <h4>Satisfied Clients</h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//stats-->
+    <!-- /testimonials -->
+    <div class="testimonials py-lg-5 py-4 d-flex" id="clients">
+        <div class="testimonials-inner container py-lg-4 py-3 my-auto">
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"><%= t('why_smart5g.heading') %></h3>
+            <div class="row">
+                <div class="col text-center p-3">
+                    <i class="fa fa-handshake-o fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.service') %></h5>
+                    <i class="fa fa-handshake-o fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.service') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-money fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.price') %></h5>
+                    <i class="fa fa-money fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.price') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-rocket fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.tech') %></h5>
+                    <i class="fa fa-rocket fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.tech') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-tachometer fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.speed') %></h5>
+                    <i class="fa fa-tachometer fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.speed') %></h6>
+                </div>
+                <div class="col text-center p-3">
+                    <i class="fa fa-shield fa-4x text-primary mb-4 d-none d-md-block"></i>
+                    <h5 class="d-none d-md-block"><%= t('why_smart5g.guarantee') %></h5>
+                    <i class="fa fa-shield fa-2x text-primary mb-4 d-block d-md-none"></i>
+                    <h6 class="d-block d-md-none"><%= t('why_smart5g.guarantee') %></h6>
+                </div>
+            </div>
+            <!--feed back
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonials_grid center">
+                            <div class="testimonials_grid-inn text-uppercase">
+                                <i class="fa fa-quote-left"></i>
+                                <p>Lorem ipsum dolor sit amet,Maecenas interdum magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+                            </div>
+                            <h3>Gretchen </h3>
+
+                            <label>United States</label>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonials_grid text-center">
+                            <div class="testimonials_grid-inn text-uppercase">
+                                <i class="fas fa-quote-left"></i>
+                                <p>Lorem ipsum dolor sit amet,Maecenas interdum magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+                            </div>
+                            <h3>Anne Marc
+
+                            </h3>
+                            <label>United States</label>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonials_grid">
+                            <div class="testimonials_grid-inn text-uppercase">
+                                <i class="fas fa-quote-left"></i>
+                                <p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+
+                            </div>
+                            <h3>Harry Baker
+
+                            </h3>
+                            <label>United States</label>
+
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
+									<span class="fa fa-arrow-left"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+                    <a class="carousel-control-next test" href="#carouselExampleControls" role="button" data-slide="next">
+									<span class="fa fa-arrow-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+
+								</a>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+    <!-- //testimonials -->
+    <!-- /Contact-->
     <section class="contact py-lg-5 py-md-5 py-3" id="contact">
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-3">
@@ -79,3 +467,96 @@
         </div>
     </section>
     <!-- //Contact -->
+    <!--/footer-->
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your Plugin chat code -->
+      <div class="fb-customerchat"
+        attribution="biz_inbox"
+        page_id="109221740897785">
+      </div>
+    <footer class="footer text-left">
+        <div class="container py-4 py-sm-5">
+
+            <div class="row py-sm-4 py-3">
+                <div class="col-lg-2 col-md-4">
+                    <ul class="list-footer" data-aos="fade-up">
+                        <li>
+                            <a href="#home" class="nav-link scroll">
+                                 <%= t('menu.home') %>
+                            </a>
+                        </li>
+                        <li class="my-2">
+                            <a href="#about" class="nav-link scroll">
+                               <%= t('menu.tech') %>
+                            </a>
+                        </li>
+                        <li class="my-2">
+                            <a href="#services" class="nav-link scroll">
+                               <%= t('menu.services') %>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#projects" class="nav-link scroll">
+                              <%= t('menu.projects') %>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link scroll">
+                                <%= t('menu.contact') %>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offset-lg-6"></div>
+                <div class="col-lg-4 footer-end-grid mt-md-0 mt-sm-5" >
+                    <h2>
+                        <a href="<%=root_path%>">
+                            <%= image_tag 'logo.png', :class => "img-fluid p-5",  lazy: true %>
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between pt-lg-3  footer-bottom-cpy">
+                <div class="copy-right-w3ls">
+                    <p>© 2021 Smart5G. All rights reserved | Design by
+                        <a href="http://w3layouts.com/"> W3layouts </a>
+                    </p>
+                </div>
+                <div class="social-content pb-md-0 pb-4">
+                    <ul class="social-icons text-center d-flex">
+                        <li class="ml-lg-5">
+                            <a target="_blank" href="https://www.facebook.com/smart5g.vn">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/company/smart5g/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--//footer-->
+

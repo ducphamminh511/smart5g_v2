@@ -36,6 +36,7 @@ en:
     services: "Services"
     projects: "Projects"
     contact: "Contact"
+    vcards: "Vcard QRCode"
   banner:
     intro: "Introduction"
     hello: "Hello, this is Smart5G"
@@ -86,7 +87,15 @@ en:
     phone: "Your phone number"
     message: "Your message"
     submit: "Submit"
+    address: "Your address"
+    organization: "Your organization"
+    website: "Your website"
     flash_success: "Thanks for your message. We'll get back to you soon. Please check email, include spam folder."
+    flash_error: "Oops, something went wrong"
+  vcards:
+    heading: "QRcode generator for contact sharing"
+    submit: "Generate"
+    flash_success: "Take a screenshot to use the QRcode later"
     flash_error: "Oops, something went wrong"
   why_smart5g:
     heading: "Why Smart5G"

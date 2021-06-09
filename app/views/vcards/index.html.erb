@@ -1,0 +1,63 @@
+<section class="w3l-coming-soon-page">
+    <div class="coming-page-info-6">
+        <div class="wrapper">
+            <div class="container">
+            <div class="row">
+                <div class="offset-md-4"></div>
+                <div class="col-md-4 text-center"><div class="logo">
+                    <a href="<%=root_path%>">
+                      <%= image_tag 'logo.png', :class => "img-fluid d-none d-md-block p-5",  lazy: true %>
+                      <%= image_tag 'logo.png', :class => "img-fluid d-block d-md-none",  lazy: true %>
+                    </a>
+                </div>
+                
+            </div>
+                
+                
+            </div>
+            <div class="coming-block">
+                <h3 class="text-white"><%=t('vcards.heading')%></h3>
+                <%= form_with url: vcards_path, method: :post do |form| %>
+                    <div class="input">
+                        <%= form.text_field :name, placeholder: t('contact.name') %>
+                    </div>
+                    <div class="input">
+                        <%= form.text_field :mail, placeholder: t('contact.mail') %>
+                    </div>
+                    <div class="input">
+                        <%= form.text_field :phone, placeholder: t('contact.phone') %>
+                    </div>
+                    <div class="input">
+                        <%= form.text_field :address, placeholder: t('contact.address') %>
+                    </div>
+                    <div class="input">
+                        <%= form.text_field :organization, placeholder: t('contact.organization') %>
+                    </div>
+                    <div class="input">
+                        <%= form.text_field :website, placeholder: t('contact.website') %>
+                    </div>
+                    
+                    <div class="button">
+                        <%= form.submit t('vcards.submit') %>
+                    </div>
+                <% end %>
+                <div id="qrcode"><%= raw @svg%></div>
+                
+            </div>
+            <div class="copyright-footer">
+                <div class="w3l-copy-right-left">
+                    <p>© 2021 Smart5G. Made with <span class="fa fa-heart"></span></p>
+                </div>
+                <div class="w3l-copy-right">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/smart5g.vn"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
+                        <li><a href="https://www.linkedin.com/company/smart5g/"><span class="fa fa-linkedin" aria-hidden="true"></span></a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- //coming-61-w3l-vv-section -->

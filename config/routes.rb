@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     root 'home#index'
     resources :home
     resources :contacts
+    resources :vcards
+    get 'download_qrcode', to: "vcards#download_qrcode"
   end
 end

@@ -1,0 +1,3 @@
+class Vcard < ApplicationRecord
+    
+end
